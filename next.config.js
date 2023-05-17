@@ -1,12 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
+  output: "export",
   images: {
     unoptimized: true,
+    loader: "custom",
+    loaderFile: "./imageLoader.js",
   },
   experimental: {
     appDir: true,
   },
-}
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

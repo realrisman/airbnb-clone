@@ -4,7 +4,7 @@ const nextConfig = {
   images: {
     unoptimized: true,
     loader: "custom",
-    loaderFile: "./imageLoader.js",
+    loaderFile: "./image-loader.js",
   },
   experimental: {
     appDir: true,

@@ -34,7 +34,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: '16'
+          node-version: "16"
       - name: Install pnpm
         run: |
           corepack enable
@@ -50,9 +50,7 @@ jobs:
       - name: Install dependencies
         run: pnpm install
       - name: Build with Next.js
-        run: pnpm next build
-      - name: Static HTML export with Next.js
-        run: pnpm next export
+        run: pnpm build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:

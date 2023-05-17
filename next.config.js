@@ -1,14 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export",
-  images: {
-    unoptimized: true,
-    loader: "custom",
-    loaderFile: "./image-loader.js",
-  },
   experimental: {
     appDir: true,
   },
 };
+
+if (process.env.NODE_ENV === "production") {
+  nextConfig.basePath = "/airbnb-clone";
+  nextConfig.output = "export";
+}
 
 module.exports = nextConfig;

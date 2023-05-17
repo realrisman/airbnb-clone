@@ -34,7 +34,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: "16"
+          node-version: "18"
       - name: Install pnpm
         run: |
           corepack enable
@@ -46,15 +46,11 @@ jobs:
           # server side image optimization (https://nextjs.org/docs/api-reference/next/image#unoptimized).
           #
           # You may remove this line if you want to manage the configuration yourself.
-          static_site_generator: next
+          # static_site_generator: next
       - name: Install dependencies
         run: pnpm install
       - name: Build with Next.js
-        run: pnpm next build
-      - name: Static HTML export with Next.js
-        run: pnpm next export
-      - name: Static HTML export with Next.js
-        run: pnpm next export
+        run: pnpm build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:

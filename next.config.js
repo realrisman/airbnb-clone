@@ -6,7 +6,7 @@ const nextConfig = {
 };
 
 if (process.env.NODE_ENV === "production") {
-  nextConfig.basePath = "/airbnb-clone";
+  nextConfig.assetPrefix = "/airbnb-clone";
   nextConfig.output = "export";
 }
 

@@ -11,6 +11,7 @@ if (process.env.NODE_ENV === "production") {
     loader: "custom",
     loaderFile: "./image-loader.js",
   };
+  nextConfig.assetPrefix = "/airbnb-clone";
 }
 
 module.exports = nextConfig;
